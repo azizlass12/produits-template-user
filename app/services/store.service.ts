@@ -37,7 +37,12 @@ export class StoreService {
     this.createHeaders(headers);
     return this.http.post<any>('http://localhost:8080/SpringMVC/servlet/api/v1/Resto/', store);
   }
-
+  getProductById(id: string){
+    return this.http.get(`http://127.0.0.1:3000/produit/${id}`);
+  }
+  GetProduit():Observable<any[]>{
+    return this.http.get<any[]>("http://127.0.0.1:3000/produit");
+  }
 
   update(store: Store): Observable<Store> {
     return this.http.put<Store>(`${this.base_url}/${store.idResto}`, store);

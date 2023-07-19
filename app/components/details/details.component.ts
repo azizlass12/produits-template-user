@@ -14,7 +14,7 @@ details: any;
 constructor(private route:ActivatedRoute,private service:StoreService){
   this.route.params.subscribe(params =>this.id=params['id'])    // id stock dan var id
 
-  this.service.getEventById(this.id).subscribe((Response:any)=> {
+  this.service.getProductById(this.id).subscribe((Response:any)=> {
 
     this.details=Response
     console.log('details :' , this.details);

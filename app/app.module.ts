@@ -37,7 +37,7 @@ import { UpdateCategoryComponent } from './components/category/update-category/u
 import { ListRestaurantComponent } from './components/restaurant/list-retaurants/list-restaurant.component';
 import { CreateRestaurantComponent } from './components/restaurant/create-restaurant/create-restaurant.component';
 import { UpdateRestaurantComponent } from './components/restaurant/update-restaurant/update-restaurant.component';
-import { EvenementComponent } from './components/evenement/evenement.component';
+import { ProduitsComponent } from './components/produits/produits.component';
 
 
 @NgModule({
@@ -69,7 +69,7 @@ import { EvenementComponent } from './components/evenement/evenement.component';
     ListRestaurantComponent,
     CreateRestaurantComponent,
     UpdateRestaurantComponent,
-    EvenementComponent
+    ProduitsComponent
 
   ],
   imports: [

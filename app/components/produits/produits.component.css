@@ -55,109 +55,6 @@
   font-weight: 300;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body{margin-top:20px;
-  background-color:#f2f6fc;
-  color:#69707a;
-  }
-  .img-account-profile {
-      height: 10rem;
-  }
-  .rounded-circle {
-      border-radius: 50% !important;
-  }
-  .card {
-      box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
-  }
-  .card .card-header {
-      font-weight: 500;
-  }
-  .card-header:first-child {
-      border-radius: 0.35rem 0.35rem 0 0;
-  }
-  .card-header {
-      padding: 1rem 1.35rem;
-      margin-bottom: 0;
-      background-color: rgba(33, 40, 50, 0.03);
-      border-bottom: 1px solid rgba(33, 40, 50, 0.125);
-  }
-  .form-control, .dataTable-input {
-      display: block;
-      width: 100%;
-      padding: 0.875rem 1.125rem;
-      font-size: 0.875rem;
-      font-weight: 400;
-      line-height: 1;
-      color: #69707a;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #c5ccd6;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      border-radius: 0.35rem;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  
-  .nav-borders .nav-link.active {
-      color: #0061f2;
-      border-bottom-color: #0061f2;
-  }
-  .nav-borders .nav-link {
-      color: #69707a;
-      border-bottom-width: 0.125rem;
-      border-bottom-style: solid;
-      border-bottom-color: transparent;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      padding-left: 0;
-      padding-right: 0;
-      margin-left: 1rem;
-      margin-right: 1rem;
-  }
-
 .snip1423 .price {
   font-weight: 500;
   font-size: 1.4em;
@@ -219,43 +116,163 @@ body{margin-top:20px;
   margin-bottom: 10px;
 }
 
-.rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+
+
+
+
+
+body{
+
+  background-color: #f7f6f6;
   }
   
-  .rating input[type="radio"] {
-    display: none;
+  .card{
+  
+  width: 350px;
+  border: none;
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  border-radius: 12px;
   }
   
-  .rating label {
-    cursor: pointer;
-    color: #888;
-  }
-  /* ion-android-cart */
-  .rating label:before {
-    content: '\2605';
-    font-size: 20px;
-  }
+  .circle-image img{
   
-  .rating label.full:before {
-    content: '\2605';
-    color: #ffce00;
-  }
-  
-  .rating label.half:before {
-    content: '\2605';
+  border: 6px solid #fff;
+    border-radius: 100%;
+    padding: 0px;
+    top: -28px;
     position: relative;
-    display: inline-block;
-    color: #ffce00;
-    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    z-index: 1;
+    background: #e7d184;
+    cursor: pointer;
+  
   }
   
-  .rating input[type="radio"]:checked ~ label:before,
-  .rating input[type="radio"]:checked ~ label.half:before {
-    color: #ffce00;
+  
+  .dot {
+      height: 18px;
+    width: 18px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid #fff;
+    top: -48px;
+    left: 186px;
+    z-index: 1000;
   }
+  
+  .name{
+  margin-top: -21px;
+  font-size: 18px;
+  }
+  
+  
+  .fw-500{
+  font-weight: 500 !important;
+  }
+  
+  
+  .start{
+  
+  color: green;
+  }
+  
+  .stop{
+  color: red;
+  }
+  
+  
+  .rate{
+  
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  
+  }
+  
+  
+  
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center
+  }
+  
+  .rating>input {
+    display: none
+  }
+  
+  .rating>label {
+    position: relative;
+    width: 1em;
+    font-size: 30px;
+    font-weight: 300;
+    color: #FFD600;
+    cursor: pointer
+  }
+  
+  .rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+  }
+  
+  .rating>label:hover:before,
+  .rating>label:hover~label:before {
+    opacity: 1 !important
+  }
+  
+  .rating>input:checked~label:before {
+    opacity: 1
+  }
+  
+  .rating:hover>input:checked~label:before {
+    opacity: 0.4
+  }
+  
+  
+  .buttons{
+  top: 36px;
+    position: relative;
+  }
+  
+  
+  .rating-submit{
+  border-radius: 15px;
+  color: #fff;
+      height: 49px;
+  }
+  
+  
+  .rating-submit:hover{
+  
+  color: #fff;
+  }
+  
   
  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

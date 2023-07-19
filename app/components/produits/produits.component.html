@@ -1,0 +1,65 @@
+
+   <div class="cards-container">
+   
+   
+    <ng-container *ngFor="let produit of produits; index as i">
+        <figure class="snip1423">
+            <img [src]="produit.image" alt="sample90" />
+            <figcaption>
+          <h3>{{ produit.name }}</h3>
+          <p>{{ produit.description }}</p>
+          <div class="price">
+            <s>{{produit.prixInitial}}</s>{{ produit.pourcentageRemise }}
+          </div>
+        </figcaption>
+        <i class="ion-android-cart" (click)="details(produit._id,i)" style="cursor: pointer;" ></i>
+        
+        <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+        </div>
+      </figure>
+  </ng-container>
+
+  </div>
+ 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

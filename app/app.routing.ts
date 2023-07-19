@@ -31,8 +31,8 @@ import {UpdateCategoryComponent} from './components/category/update-category/upd
 import { ListRestaurantComponent } from './components/restaurant/list-retaurants/list-restaurant.component';
 import { CreateRestaurantComponent } from './components/restaurant/create-restaurant/create-restaurant.component';
 import { UpdateRestaurantComponent } from './components/restaurant/update-restaurant/update-restaurant.component';
-import { EvenementComponent } from './components/evenement/evenement.component';
 import { DetailsComponent } from './components/details/details.component';
+import { ProduitsComponent } from './components/produits/produits.component';
 //import {ListPlatPersoComponent} from "./components/restaurant/list-plat-perso/list-plat-perso.component";
 
 const routes: Routes = [
@@ -56,12 +56,11 @@ const routes: Routes = [
     { path: 'category',     component: ListCategoryComponent },
     { path: 'category/create',     component: CreateCategoryComponent },
     { path: 'category/:id',     component: UpdateCategoryComponent },
-    { path: 'evenements',component: EvenementComponent },
     { path: 'details/:id',component: DetailsComponent },
 
 
-    { path: 'restaurants',component: ListRestaurantComponent },
-    { path: 'restaurant/:id',component: CreateRestaurantComponent },
+    { path: 'produits',component: ProduitsComponent },
+    { path: 'details/:id',component: DetailsComponent },
     //{ path: 'restaurant/platPerso/:id',  component:  ListPlatPersoComponent },
 
 
