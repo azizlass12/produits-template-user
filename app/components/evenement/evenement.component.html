@@ -1,0 +1,24 @@
+<div class="container">
+  
+<div class="cards-container">
+   
+   
+  <ng-container *ngFor="let evenement of evenements; index as i">
+      <figure class="snip1423">
+          <figcaption>
+        <h3>{{ evenement.name }}</h3>
+        <p>{{ evenement.description }}</p>
+        <div class="price">
+          <p>{{this.evenement.createdAt.substring(0,10)}}</p>{{this.evenement.updatedAt.substring(0,10)}}
+        </div>
+      </figcaption>
+      <i class="" (click)="details(evenement._id,i)" style="cursor: pointer;" >Voir</i>
+      
+    
+    </figure>
+</ng-container>
+
+
+</div>
+</div>
+  

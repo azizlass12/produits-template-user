@@ -1,0 +1,193 @@
+
+<!-- .vhcf-section -->
+<script>
+  var app = {
+    settings: {
+      container: $(".calendar"),
+      calendar: $(".front"),
+      days: $(".weeks span"),
+      form: $(".back"),
+      input: $(".back input"),
+      buttons: $(".back button"),
+    },
+
+    init: function () {
+      instance = this;
+      settings = this.settings;
+      this.bindUIActions();
+    },
+
+    swap: function (currentSide, desiredSide) {
+      settings.container.toggleClass("flip");
+
+      currentSide.fadeOut(900);
+      currentSide.hide();
+      desiredSide.show();
+    },
+
+    bindUIActions: function () {
+      settings.days.on("click", function () {
+        instance.swap(settings.calendar, settings.form);
+        settings.input.focus();
+      });
+
+      settings.buttons.on("click", function () {
+        instance.swap(settings.form, settings.calendar);
+      });
+    },
+  };
+
+  app.init();
+</script>
+
+<div class="container-xl px-4 mt-4">
+  <!-- Account page navigation-->
+  
+  <hr class="mt-0 mb-4" />
+  <div class="row">
+    <div class="col-xl-4">
+      <!-- Profile picture card-->
+      <div class="card mb-4 mb-xl-0">
+        <div class="vhcf-module">
+          <div class="vhcf-promo_description">
+            <div class="container">
+              <div class="calendar">
+                <div class="front">
+                  <div class="current-date">
+                    <!-- <h1>18   15th</h1> -->
+                    <h1>july 2023</h1>
+                  </div>
+
+                  <div class="current-month">
+                    <ul class="week-days">
+                      <li>MON</li>
+                      <li>TUE</li>
+                      <li>WED</li>
+                      <li>THU</li>
+                      <li>FRI</li>
+                      <li>SAT</li>
+                      <li>SUN</li>
+                    </ul>
+
+                    <div class="weeks">
+                      <div class="first">
+                        <span class="last-month">28</span>
+                        <span class="last-month">29</span>
+                        <span class="last-month">30</span>
+                        <span class="last-month">31</span>
+                        <span>01</span>
+                        <span>02</span>
+                        <span>03</span>
+                      </div>
+
+                      <div class="second">
+                        <span>04</span>
+                        <span>05</span>
+                        <span class="event">06</span>
+                        <span>07</span>
+                        <span>08</span>
+                        <span>09</span>
+                        <span>10</span>
+                      </div>
+
+                      <div class="third">
+                        <span>11</span>
+                        <span>12</span>
+                        <span>13</span>
+                        <span>14</span>
+                        <span>15</span>
+                        <span>16</span>
+                        <span class="active">17</span>
+                      </div>
+
+                      <div class="fourth">
+                        <span>18</span>
+                        <span>19</span>
+                        <span>20</span>
+                        <span>21</span>
+                        <span>22</span>
+                        <span>23</span>
+                        <span>24</span>
+                      </div>
+
+                      <div class="fifth">
+                        <span>25</span>
+                        <span>26</span>
+                        <span>27</span>
+                        <span>28</span>
+                        <span>29</span>
+                        <span>30</span>
+                        <span>31</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="back">
+                  <input placeholder="What's the event?" />
+                  <div class="info">
+                    <div class="date">
+                      <p class="info-date">Date: <span>Jan 15th, 2016</span></p>
+                      <p class="info-time">Time: <span>6:35 PM</span></p>
+                    </div>
+                    <div class="address">
+                      <p>Address: <span>129 W 81st St, New York, NY</span></p>
+                    </div>
+                    <div class="observations">
+                      <p>
+                        Observations: <span>Be there 15 minutes earlier</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="actions">
+                    <button class="save">
+                      Save <i class="ion-checkmark"></i>
+                    </button>
+                    <button class="dismiss">
+                      Dismiss <i class="ion-android-close"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8">
+      <!-- Account details card-->
+      <div class="card mb-4">
+        <div class="card-header">Evenement Details</div>
+        <div class="card-body">
+          <div class="vhcf-module">
+            <div class="vhcf-promo_description">
+              <h2 class="vhcf-module_header">
+                Nom d'evenement : {{ this.details.name }}
+              </h2>
+              <p>
+                <em
+                  ><strong
+                    >Date d'evenement : {{ this.details.dateFin.substring(0, 10) }}
+                  </strong></em
+                >
+              </p>
+              <p>Description : {{ this.details.description }}</p>
+              <p>Participant : {{ this.details.nbparticipant }}</p>
+              <p>createdAt : {{ this.details.createdAt.substring(0, 10) }}</p>
+              <p>updatedAt : {{ this.details.updatedAt.substring(0, 10) }}</p>
+            </div>
+          </div>
+          <!-- .vhcf-module -->
+          <div class="vhcf-module">
+            <img
+              src="https://loremipsumcorp.com/wp-content/themes/loremipsum_mobile/img/share.png"
+              alt=""
+            />
+          </div>
+          <!-- .vhcf-module profile -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
